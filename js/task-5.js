@@ -43,3 +43,4 @@ switch (deliveryToTheCountry) {
   default:
     alert (`В вашей стране доставка не доступна`);
 }
+

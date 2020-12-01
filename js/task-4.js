@@ -6,19 +6,18 @@ let orderDroid = prompt(`Введите количество дроидов дл
 const CANCELED_BY_USER = 'Отменено пользователем!';
 const ACCESS_DENIED = 'Недостаточно средств на счету!';
 
-let overPrice = orderDroid * pricePerDroid;
-let balanceCredit = credit - orderDroid * pricePerDroid;
 let message;
 
 if (orderDroid === null) {
   message = CANCELED_BY_USER;
 }
 
-else if (credit <= overPrice) {
+else if (orderDroid * pricePerDroid > credit) {
   message = ACCESS_DENIED;
 }
 
-  else if (balanceCredit) {
+  else  {
+  const balanceCredit = credit - orderDroid * pricePerDroid
   orderDroid = Number(orderDroid);
   message = `Куплено  ${orderDroid} дроид_(а)(ов). Остаток кредитов ${balanceCredit} `;
   }

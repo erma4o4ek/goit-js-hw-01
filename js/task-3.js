@@ -17,4 +17,4 @@ else {
 message = ACCESS_IS_DENIED;
 }
 
-console.log(message);
+alert(message);
